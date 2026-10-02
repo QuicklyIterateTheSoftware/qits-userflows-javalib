@@ -1,6 +1,6 @@
 archetype: maven-library
 artifacts:
-  - { type: maven, name: "eu.wohlben.qits:qits-userflows", sbom: qits-userflows/target/sbom.json }
+  - { type: maven, name: "eu.wohlben.qits:qits-userflows", path: qits-userflows, sbom: qits-userflows/target/sbom.json }
 
 # BOTH SLOTS ARE OVERRIDDEN AND NEITHER IS OPTIONAL. This repository has no `mvnw` wrapper and no
 # `.qits-maven-settings.xml` in its tree, and it builds on `userflows-base` rather than `maven-base`
