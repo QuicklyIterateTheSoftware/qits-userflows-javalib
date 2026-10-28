@@ -140,8 +140,8 @@ classpath. It depends on **none** of the app modules; it drives qits by URL only
   bump both in lockstep. Never needs `-Dqits.variant`.
 - **Releasing this library**: push a branch to the platform git host and open a **release request**
   against this repository — `POST /projects/api/repositories/<repoId>/release-requests` with
-  `{"branch"}` (what the release carries is derived from its branches), or the Release Requests view. Nothing merges and nothing releases at that
-  call: qits-projects folds `main` and the named branch onto a backing branch `release/<id>`,
+  `{"branch"}` (what the release carries is derived from its branches), or the Release Requests
+  view. Nothing merges and nothing releases at that call: qits-projects folds `main` and the named branch onto a backing branch `release/<id>`,
   `.config/qits/ci-event-release-request.yml` runs the QA build over that fold, and a **gating green
   verdict on the fold** is what lets Auto Release stamp the CalVer, bump the manifests and tag.
   `.config/qits/ci-event-release.yml` then builds that tag and publishes
